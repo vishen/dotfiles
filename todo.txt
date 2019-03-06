@@ -1,0 +1,5 @@
+- Script to move all files to correct location
+- Add go install
+- Add rust install
+- Add gcloud install
+- Use pacm to install binaries
