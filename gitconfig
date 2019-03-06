@@ -1,0 +1,8 @@
+[user]
+	name = Jonathan Pentecost
+	email = pentecostjonathan@gmail.com
+
+# This fucks with cargo and causes issues when trying to
+# download crates, sigh... 
+;[url "git@github.com:"]
+;	insteadOf = https://github.com/
