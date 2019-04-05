@@ -7,12 +7,15 @@ set -gx PATH /home/pentecostjonathan/.cargo/bin $PATH
 # Aliases
 alias k "kubectl"
 alias kc "kubectl config current-context"
+alias chgke "gcloud container clusters get-credentials coralhealth-cluster --zone us-central1-a --project my-coral-health-app"
 
 alias t "tmux"
 
 alias ch "cd ~/src/coral-health"
 alias gov "cd ~/go/src/github.com/vishen"
 
-alias gcav "gcloud config set account pentecostjonathan@gmail.com ;and gcloud config list"
+#alias gcav "gcloud config set account pentecostjonathan@gmail.com ;and gcloud config list"
+#alias gcv_admin "gcloud config set project vishen-admin ;and gcav"
 
-alias gcv_admin "gcloud config set project vishen-admin ;and gcav"
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/pentecostjonathan/yes/google-cloud-sdk/path.fish.inc' ]; . '/home/pentecostjonathan/yes/google-cloud-sdk/path.fish.inc'; end

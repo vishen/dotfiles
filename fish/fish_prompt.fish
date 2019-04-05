@@ -1,7 +1,7 @@
 # Status Chars
 set __fish_git_prompt_char_dirtystate '!'
 set __fish_git_prompt_char_untrackedfiles '☡'
-set __fish_git_prompt_char_stashstate '↩'
+set __fish_git_prompt_char_stashstate 'X'
 set __fish_git_prompt_char_cleanstate '✓'
 
 # Display the state of the branch when inside of a git repo
@@ -129,6 +129,6 @@ function fish_prompt
     set_color red
   end
 
-  printf '↪ '
+  printf '> '
   set_color normal
 end
