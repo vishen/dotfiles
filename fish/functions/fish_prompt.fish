@@ -1,0 +1,1 @@
+/home/pentecostjonathan/.config/fish/fish_prompt.fish
