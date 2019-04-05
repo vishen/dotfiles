@@ -25,6 +25,7 @@ if dein#load_state('/home/pentecostjonathan/.cache/dein')
   call dein#add('ziglang/zig.vim')
   call dein#add('rust-lang/rust.vim')
   call dein#add('Shougo/neocomplete')
+  call dein#add('stephpy/vim-yaml')
 
   " Required:
   call dein#end()
@@ -65,8 +66,8 @@ set relativenumber
 "set splitbelow                  " Split horizontal windows below to the current windows
 
 " Indent same level as previous line
-set smartindent
-set autoindent
+" set smartindent
+" set autoindent
 
 " Set highlight search on
 set hlsearch
