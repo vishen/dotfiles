@@ -1,8 +1,10 @@
 #!/bin/bash
 
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-sh ./installer.sh ~/.cache/dein &> /dev/null
-rm ./installer.sh
+if [ ! -d "~/.cache/dein" ]; then
+		curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+		sh ./installer.sh ~/.cache/dein &> /dev/null
+		rm ./installer.sh
+fi
 
 mkdir -p ~/.config/pacm
 mkdir -p ~/.config/fish

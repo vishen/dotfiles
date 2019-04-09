@@ -21,12 +21,13 @@ if dein#load_state('/home/pentecostjonathan/.cache/dein')
   call dein#add('tpope/vim-fugitive')
   call dein#add('kien/ctrlp.vim')
   call dein#add('scrooloose/nerdtree')
-  call dein#add('fatih/vim-go')
   call dein#add('ziglang/zig.vim')
   call dein#add('rust-lang/rust.vim')
   call dein#add('Shougo/neocomplete')
   call dein#add('stephpy/vim-yaml')
-
+  
+  call dein#add('fatih/vim-go')
+  
   " Required:
   call dein#end()
   call dein#save_state()

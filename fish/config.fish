@@ -1,4 +1,5 @@
 # Set Path
+set -gx PATH /home/pentecostjonathan/src/bin $PATH
 set -gx PATH /home/pentecostjonathan/src/bin/pacmbin $PATH
 set -gx PATH /home/pentecostjonathan/src/go/bin $PATH
 set -gx PATH /home/pentecostjonathan/go/bin $PATH

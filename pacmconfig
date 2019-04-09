@@ -20,6 +20,11 @@ dir=/home/pentecostjonathan/src/bin/pacmbin
 [jq@1.6]
 	active=true
 
+; Doesn't work at the moment since it downloads an executable that isn't
+; in an archive..?
+;[kustomize@2.0.3]
+;	active=true
+
 [recipe helm]
     url=https://storage.googleapis.com/kubernetes-helm/helm-v{{ .Version }}-{{ .OS }}-{{ .Arch }}.tar.gz
 
@@ -93,6 +98,13 @@ dir=/home/pentecostjonathan/src/bin/pacmbin
     linux_arm=linux:aarch_64
     darwin_amd64=osx:x86_64
     darwin_386=osx:x86_32
+
+[recipe kustomize]
+	url=https://github.com/kubernetes-sigs/kustomize/releases/download/v{{ .Version }}/kustomize_{{ .Version }}_{{ .OS }}_{{ .Arch }}
+	binary=true
+	binary=kustomize
+    
+	releases_github=https://api.github.com/repos/kubernetes-sig/kustomize/releases
 
 [checksum protoc 3.6.1]
     linux_amd64=checksum_sha256:6003de742ea3fcf703cfec1cd4a3380fd143081a2eb0e559065563496af27807
