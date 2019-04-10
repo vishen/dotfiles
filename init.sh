@@ -14,6 +14,17 @@ mkdir -p $HOME/.cargo/bin
 sudo apt-get update
 sudo apt-get install binutils fish tmux
 
+install_docker() {
+	curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+	sudo apt-key fingerprint 0EBFCD88
+	sudo echo "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable"
+	 > /etc/apt/sources.list
+
+	sudo apt-get update
+	sudo apt-get install docker-ce docker-ce-cli containerd.io
+	sudo usermod -a -G docker $USER 
+}
+
 configure_fish() {
 	sudo usermod -s /usr/bin/fish pentecostjonathan
 	curl -L https://get.oh-my.fish | fish
