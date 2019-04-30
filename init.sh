@@ -5,6 +5,7 @@ HOME=~
 mkdir -p $HOME/.config
 mkdir -p $HOME/src/bin
 mkdir -p $HOME/downloads
+mkdir -p $HOME/installs
 
 mkdir -p $HOME/src/go
 mkdir -p $HOME/go
@@ -13,6 +14,15 @@ mkdir -p $HOME/.cargo/bin
 
 sudo apt-get update
 sudo apt-get install binutils fish tmux
+
+install_neovim() {
+	NEOVIM_VERSION=0.3.4
+	pushd $HOME/downloads 
+	wget https://github.com/neovim/neovim/releases/download/v$NEOVIM_VERSION/nvim-linux64.tar.gz
+	tar -xzf nvim-linux64.tar.gc -C $HOME/installs
+	popd
+	ln -s $HOME/installs/nvim-linux64/bin/nvim $HOME/src/bin/nvim
+}
 
 install_docker() {
 	curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
@@ -72,9 +82,13 @@ install_pacm() {
 	$HOME/src/bin/go get -u github.com/vishen/pacm
 }
 
+install_rust() {
+	curl https://sh.rustup.rs -sSf | sh
+}
+
 #configure_fish
 # install_go
 # install_dotfiles
 #install_pacm
-install_gcloud
+# install_gcloud
 

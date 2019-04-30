@@ -19,4 +19,4 @@ alias gov "cd ~/go/src/github.com/vishen"
 #alias gcv_admin "gcloud config set project vishen-admin ;and gcav"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/pentecostjonathan/yes/google-cloud-sdk/path.fish.inc' ]; . '/home/pentecostjonathan/yes/google-cloud-sdk/path.fish.inc'; end
+if [ -f "/home/$USER/src/google-cloud-sdk/path.fish.inc" ]; . "/home/$USER/src/google-cloud-sdk/path.fish.inc"; end

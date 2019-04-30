@@ -7,10 +7,12 @@ if [ ! -d "~/.cache/dein" ]; then
 fi
 
 mkdir -p ~/.config/pacm
+mkdir -p ~/.config/nvim
 mkdir -p ~/.config/fish
 mkdir -p ~/src/bin/pacmbin
 
 cp vimrc ~/.vimrc
+cp vimrc ~/.config/nvim/init.vim
 cp tmux.conf ~/.tmux.conf
 cp gitconfig ~/.gitconfig
 cp pacmconfig ~/.config/pacm/config
